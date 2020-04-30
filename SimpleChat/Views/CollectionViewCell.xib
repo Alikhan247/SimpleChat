@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="SimpleChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="101"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="101"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qm8-rw-do7">
+                        <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="yw4-fL-ybD">
+                                <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yw4-fL-ybD" firstAttribute="leading" secondItem="Qm8-rw-do7" secondAttribute="leading" id="4WN-0h-jWb"/>
+                            <constraint firstAttribute="width" constant="101" id="5sw-Xj-Ene"/>
+                            <constraint firstAttribute="trailing" secondItem="yw4-fL-ybD" secondAttribute="trailing" id="6BH-B1-1zb"/>
+                            <constraint firstAttribute="height" constant="101" id="6cA-Ck-p96"/>
+                            <constraint firstItem="yw4-fL-ybD" firstAttribute="top" secondItem="Qm8-rw-do7" secondAttribute="top" id="faA-v9-hh5"/>
+                            <constraint firstAttribute="bottom" secondItem="yw4-fL-ybD" secondAttribute="bottom" id="r7p-og-5gc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Qm8-rw-do7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="360-Gw-wev"/>
+                <constraint firstItem="Qm8-rw-do7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aYe-lg-GZX"/>
+                <constraint firstItem="Qm8-rw-do7" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="b6w-T6-0Bd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="120" height="101"/>
+            <connections>
+                <outlet property="img" destination="yw4-fL-ybD" id="kMb-i1-tDV"/>
+            </connections>
+            <point key="canvasLocation" x="188.40579710144928" y="101.45089285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="MeAvatar" width="36" height="36"/>
+    </resources>
+</document>
