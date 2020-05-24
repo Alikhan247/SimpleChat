@@ -25,6 +25,7 @@ class NewChatManager {
     
     let db = Firestore.firestore()
     
+    
     public var delegate: NewChatManagerDelegate?
     
     func loadUsers() {

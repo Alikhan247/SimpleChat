@@ -35,6 +35,7 @@ class RegisterViewController: UIViewController {
                             "name": currentUser.displayName ?? "undefined",
                             "email": currentUser.email ?? "undefined",
                             "uid": currentUser.uid,
+                            "status": 0,
                             K.FStore.dateField: Date().timeIntervalSince1970
                         ]) { (error) in
                             if let e = error {

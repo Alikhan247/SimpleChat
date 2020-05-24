@@ -13,11 +13,18 @@ class ChatViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
+    var messageManager = ChatViewManager()
     
     var selectedChat: Chat? {
         didSet {
             // whenever the selectedChat changes, reload messages
             if let selectedChat = selectedChat {
+                for i in selectedChat.participants {
+                    if i != Auth.auth().currentUser?.email {
+                        self.navigationItem.title = i
+                    }
+                }
+                
                 loadMessages()
             }
             navigationController?.title = "selectedChat?.email"
@@ -30,6 +37,9 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        messageManager.delegate = self
+        
         
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         tableView.dataSource = self
@@ -141,5 +151,17 @@ extension ChatViewController : UITableViewDataSource {
 }
 
 extension ChatViewController: UIImagePickerControllerDelegate {
+    
+}
+
+extension ChatViewController: MessageManagerDelegate {
+    func didUpdateMessages(_ chatManager: NewChatManager, chat: Chat) {
+        
+    }
+    
+    func didFailWitherror(error: Error) {
+        
+    }
+    
     
 }
